@@ -1,0 +1,5 @@
+suites:
+    main:
+        namespace: InspireBBS
+        psr4_prefix: InspireBBS
+        src_path: app

@@ -1,0 +1,1 @@
+# [インスパイヤされて掲示板を作りたくなった](http://qiita.com/tadsan/items/cdbbb5b08591af2b110d) Laravel バージョン
