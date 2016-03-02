@@ -1,16 +1,16 @@
 <?php
 
-/*
-|--------------------------------------------------------------------------
-| Application Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register all of the routes for an application.
-| It's a breeze. Simply tell Laravel the URIs it should respond to
-| and give it the controller to call when that URI is requested.
-|
-*/
-
 Route::get('/', function () {
-    return view('welcome');
+    $hour = Carbon\Carbon::now()->hour;
+
+    $greeting = null;
+    if (4 <= $hour && $hour < 10) {
+        $greeting = "お早うございます";
+    } elseif (10 <= $hour && $hour < 17) {
+        $greeting = "こんにちは";
+    } else {
+        $greeting = "こんばんわ";
+    }
+
+    return view('index', compact('greeting'));
 });
