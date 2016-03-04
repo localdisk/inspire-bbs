@@ -14,3 +14,7 @@ Route::get('/', function () {
 
     return view('index', compact('greeting'));
 });
+
+Route::get('lists', function(\InspireBBS\Models\Board $board) {
+    return view('list', ['boards' => $board->all()]);
+});
